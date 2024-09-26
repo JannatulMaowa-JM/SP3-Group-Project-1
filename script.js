@@ -7,7 +7,6 @@ const quizData = [
         d: "4th",
         correct: "c",
     },
-    
     {
         question: "Q : 02--> What is the capital of Bangladesh?",
         a: "Dhaka",
@@ -16,8 +15,7 @@ const quizData = [
         d: "Mymensingh",
         correct: "a",
     },
-   
-{
+    {
         question: "Q : 03--> Where is the permanent campus of Daffodil International University?",
         a: "Mirpur, Dhaka",
         b: "Cumilla",
@@ -25,17 +23,16 @@ const quizData = [
         d: "Ashulia, Savar",
         correct: "d",
     },
-
-      {
+    {
         question: "Q : 04--> Who is making the Web standards?",
         a: "Mozilla",
         b: "Goofle",
         c: "Microsoft",
         d: "WWW Consortium",
         correct: "d",
-          
+
     },
-{
+    {
         question: "Q : 05--> Choose the correct HTML element for the largest heading:",
         a: "<h1>",
         b: "<h6>",
@@ -51,6 +48,24 @@ const quizData = [
         d: "< >",
         correct: "c",
     },
+
+        question: "Q : 07--> What is the correct HTML element to define important text?",
+        a: "<b>",
+        b: "<important>",
+        c: "<strong>",
+        d: "<i>",
+        correct: "c",
+    },
+    {
+        question: "Q : 08--> Which character is used to indicate an end tag?",
+        a: "<<>",
+        b: "</>",
+        c: "<*>",
+        d: "<^>",
+        correct: "b",
+    },
+
+  
     
     {
         question: "Q : 09--> Which country will host 45th ICPC World Finals?",
@@ -65,6 +80,7 @@ const quizData = [
         a: "Daffodil International University",
         b: "BUET",
         c: "Dhaka University",
+        d: "University of Asia Pacific",
         d: "University of Asia Pacific"
         correct: "d",
     },
@@ -96,6 +112,8 @@ function loadQuiz() {
     d_text.innerText = currentQuizData.d
 }
 
+
+
 function deselectAnswers() {
     answerEls.forEach(answerEl => answerEl.checked = false)
 }
@@ -112,6 +130,7 @@ function getSelected() {
     return answer
 }
 
+
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     
@@ -119,6 +138,7 @@ submitBtn.addEventListener('click', () => {
         if(answer === quizData[currentQuiz].correct) {
             score++
         }
+
         
         currentQuiz++
 
@@ -131,3 +151,8 @@ submitBtn.addEventListener('click', () => {
                 <h2>"Many many thanks for your Participation."</h2>
                 <h2>"This project is created by: Mohammad Salman, Jannatul Maowa and Rumanna Aktar Rumu"</h2>
                 <button onclick="location.reload()">Play Again</button>
+            `
+        }
+    }
+})
+
